@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: subscriptions-tracker
+  jackson:
+    property-naming-strategy: SNAKE_CASE
+
+  datasource:
+    url: ${DATASOURCE_URL:jdbc:postgresql://localhost:5432/subscriptions}
+    username: ${DATASOURCE_USERNAME:postgres}
+    password: ${DATASOURCE_PASSWORD:postgres}
+
+  jpa:
+    hibernate:
+      ddl-auto: none
+
+springdoc:
+  swagger-ui:
+    path: /docs
